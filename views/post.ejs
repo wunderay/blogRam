@@ -1,11 +1,9 @@
 <%- include("./partials/header.ejs")  %>
 
-<h2><%= locals.title %></h2>
+<h2><%= locals.blogPost.title %></h2>
 
-<h4><%= locals.author %></h4>
+<h4><%= locals.blogPost.author %></h4>
 
-<h4><%= locals.date %></h4>
-
-<%= locals.content %>
+<%= locals.blogPost.content %>
 
 <%- include("./partials/footer.ejs")  %>

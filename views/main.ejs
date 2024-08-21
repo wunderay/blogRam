@@ -2,9 +2,9 @@
 
 <h2>Table of Contents</h2>
 <ul class="list">
-    <% if (locals.blogPosts) { %>
-        <% for( let i = 0; i < locals.blogPosts.length; i++ ) { %>
-            <li class="list__item"><a href="/<%= locals.blogPosts[i].url %>" class="list__item__link"><%= locals.blogPosts[i].title %></a></li>
+    <% if (locals.blogIndex) { %>
+        <% for( let i = 0; i < locals.blogIndex.length; i++ ) { %>
+            <li class="list__item"><a href="/<%= locals.blogIndex[i].url %>" class="list__item__link"><%= locals.blogIndex[i].title %></a></li>
         <% } %>
     <% } %>
 </ul>
