@@ -48,15 +48,14 @@ app.get("/write", (req, res) => {
     blogPosts.push(newPost);
     let newPostCatalogue = new postCatalogue(newPost.title, newPost.postId);
     blogIndex.push(newPostCatalogue);
-    res.render("main.ejs", {blogIndex});
+    res.redirect("/");
   });
 
   app.get("/:id", (req, res) => {
     let params = req.params;
-    console.log(params);
     let blogPost = blogPosts.find((post) => post.postId == params.id);
-    if (blogPost == undefined) {
-      res.render("main.ejs", {blogIndex});
+    if (blogPost === undefined) {
+      res.redirect("/");
     } else {
       res.render("post.ejs", {blogPost});
     }
