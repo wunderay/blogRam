@@ -23,16 +23,26 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
 
-    a:active {
-        border-bottom: 2px solid #02426D;
+    a {
+        &:hover {
+            border-bottom: 2px solid #0485DB;
+        }
+        
+        &:active {
+            border-bottom: 2px solid #02426D;
+        }
     }
+    
+
 }
 
 a {
     text-decoration: none;
     font-size: 20px;
     padding: 5px;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;       
+    color: #2ea3f2;
+
 
     &:active, &:hover, &:visited {
         color: #2ea3f2;
@@ -40,7 +50,6 @@ a {
 
     &:hover {
         color: #0485DB;
-        border-bottom: 2px solid #0485DB;
     }
 
     &:active {
@@ -54,6 +63,11 @@ main {
     h2 {
         text-align: center;
         font-size: 25px;
+        padding-top: 4px;
+    }
+
+    h4 {
+        text-align: center;
     }
 
     ul {
