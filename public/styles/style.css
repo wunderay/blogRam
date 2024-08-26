@@ -35,18 +35,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
-    a {
-        &:hover {
-            border-bottom: 2px solid #0485DB;
-        }
-        
-        &:active {
-            border-bottom: 2px solid #02426D;
-        }
-    }
-    
-
 }
 
 a {
@@ -63,16 +51,19 @@ a {
 
     &:hover {
         color: #0485DB;
+        border-bottom: 2px solid #0485DB;
     }
 
     &:active {
         color: #02426D;
+        border-bottom: 2px solid #02426D;
     }
 }
 
 main {
     font-size: 20px;
     margin-top: 20px;
+    min-height: calc(100vh - 256px);
 
     h2 {
         text-align: center;
@@ -82,21 +73,39 @@ main {
 
     h4 {
         text-align: center;
+        font-size: 20px;
     }
 
-    ul {
-        list-style: none;
-        
+    ul {        
         li {
             padding: 4px;
         }
     }
+}
 
-    min-height: 1000px;
+.list__item {
+    margin-bottom: 5px;
+}
+
+.list__item__link {
+    padding-bottom: 0;
 }
 
 article {
     padding: 0 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    padding-top: 40PX;
+
+    input, textarea {
+        padding: 12px;
+        margin-bottom: 12px;
+        font-size: 20px;
+    }
 }
 
 footer {

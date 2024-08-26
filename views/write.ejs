@@ -1,14 +1,13 @@
 <%- include('./partials/header.ejs') %>
 
 <form action="/write" method="post" id="writePost">
-    <label for="title">Title: </label>
-    <input type="text" id="title" name="title" required/>
-    <label for="title">Author: </label>
-    <input type="text" id="author" name="author" required/>
-    <label for="title">Content: </label>
-    <textarea id="content" name="content" required></textarea>
-    <input type="reset" value="reset"/>
-    <input type="submit" value="submit"/>
+    <input type="text" id="title" name="title" required placeholder="Title..." size="30"/>
+    <input type="text" id="author" name="author" required placeholder="Author..."/>
+    <textarea id="content" name="content" required cols="45" rows="16" autocomplete="off" placeholder="Post..."></textarea>
+    <div class="form__buttons">
+        <input type="reset" value="reset"/>
+        <input type="submit" value="submit"/>
+    </div>
 </form>
 
 <%- include('./partials/footer.ejs') %>
